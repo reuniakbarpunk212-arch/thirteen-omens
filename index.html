@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Thirteenth Almanac — Thirteen Omens (OMEN) on BSC</title>
+<meta name="description" content="Thirteen Omens: 3,333 almanac omens struck as NFTs on BNB Smart Chain. 1,500 free for Agent ID holders and verified X accounts; the rest 0.001 BNB, 100% to the treasury. No waitlist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ecd8; --paper2:#efe4c8; --ink:#1c1710; --ink2:#4a4232;
+    --red:#8e1f1f; --rule:#b3a37f; --faint:#e7dcbd;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#ddd2b4;color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.55}
+  .sheet{max-width:880px;margin:26px auto 40px;background:var(--paper);padding:38px 46px 30px;
+    box-shadow:0 2px 0 #c9bc97, 0 14px 44px rgba(40,30,5,.35);border:1px solid #c9bc97}
+  .kicker{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);
+    border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:7px 2px}
+  h1{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(40px,7.4vw,68px);line-height:.98;
+    text-align:center;margin:20px 0 4px;letter-spacing:.005em}
+  .deck{text-align:center;font-style:italic;font-size:19px;color:var(--ink2);margin:2px auto 8px;max-width:620px}
+  .fineprint{text-align:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+  .rule3{border-top:3px double var(--ink);margin:16px 0}
+  .rule1{border-top:1px solid var(--ink);margin:16px 0}
+  h2{font-family:"Fraunces",serif;font-weight:900;font-size:25px;margin:26px 0 8px;letter-spacing:.01em}
+  h2 .no{color:var(--red);margin-right:10px}
+  h3{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin:0 0 6px}
+  p{margin:8px 0}
+  .dropcap::first-letter{font-family:"Fraunces",serif;font-weight:900;font-size:52px;float:left;line-height:.85;padding:4px 8px 0 0;color:var(--red)}
+  table{width:100%;border-collapse:collapse;font-size:17px}
+  table.fig td, table.fig th{border-bottom:1px solid var(--rule);padding:6px 4px;text-align:left}
+  table.fig td.n, table.fig th.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  table.fig tr:last-child td{border-bottom:3px double var(--ink)}
+  table.omens td{border-bottom:1px dotted var(--rule);padding:7px 6px;vertical-align:top}
+  table.omens td.num{font-family:"Fraunces",serif;font-weight:900;color:var(--red);width:52px;text-align:center}
+  table.omens td.port{font-style:italic;color:var(--ink2);width:38%}
+  .desk{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);margin-top:10px}
+  .desk>div{padding:16px 18px}
+  .desk>div:first-child{border-right:1px solid var(--ink)}
+  @media(max-width:640px){.desk{grid-template-columns:1fr}.desk>div:first-child{border-right:none;border-bottom:1px solid var(--ink)}}
+  button{font-family:"Fraunces",serif;font-weight:600;font-size:16.5px;background:var(--ink);color:var(--paper);
+    border:1px solid var(--ink);padding:10px 16px;cursor:pointer;letter-spacing:.02em}
+  button:hover{background:var(--red);border-color:var(--red)}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  button.ghost{background:transparent;color:var(--ink)}
+  button.ghost:hover{background:var(--faint);color:var(--ink)}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+  input[type=text]{width:100%;font-family:inherit;font-size:16px;padding:9px 10px;background:#fbf7ea;
+    border:1px solid var(--ink2);color:var(--ink)}
+  select{font-family:inherit;font-size:17px;padding:8px;background:#fbf7ea;border:1px solid var(--ink2)}
+  #statusBox{border:1px dashed var(--ink2);padding:10px 14px;margin:14px 0;font-size:16.5px;background:var(--paper2);min-height:26px}
+  .small{font-size:14.5px;color:var(--ink2)}
+  .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;word-break:break-all}
+  .red{color:var(--red)}
+  .ledger{border:1px solid var(--ink);padding:16px 18px;margin-top:10px;background:var(--paper)}
+  .stamp{display:inline-block;border:2px solid var(--red);color:var(--red);font-family:"Fraunces",serif;
+    font-weight:900;letter-spacing:.12em;padding:2px 10px;transform:rotate(-2deg);font-size:14px}
+  #diag{font-size:12px;color:var(--ink2);text-align:center;margin-top:18px;letter-spacing:.06em}
+  .foot{text-align:center;font-size:14.5px;color:var(--ink2)}
+  a{color:var(--red)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="kicker">
+    <span>Vol. XIII — No. 13</span>
+    <span>Friday 13 November 2026 Edition</span>
+    <span>Price: 0.001 BNB, or nothing at all</span>
+  </div>
+
+  <h1>The Thirteenth Almanac</h1>
+  <p class="deck">Being a true &amp; faithful register of the <b>Thirteen Omens</b> — 3,333 tokens of fortune
+  and misfortune, struck upon the BNB Smart Chain for those who read the signs.</p>
+  <p class="fineprint">Printed on-chain · No waitlist · The edition closes when the last omen is taken</p>
+
+  <div class="rule3"></div>
+
+  <p class="dropcap">Every almanac warns its reader, and this one is no different. Thirteen omens have been
+  entered into the ledger. Some are lucky, some are not, and the thirteenth is blank — it bears the number of
+  whoever claims it. One thousand five hundred omens are given away: <b>1,000 to bearers of a Binance Agent ID</b>
+  and <b>500 to verified accounts of X</b>, one apiece, first come first served. The remainder are sold at
+  0.001 BNB each, and every coin passes <b>straight to the treasury</b> in the same transaction — the Almanac
+  keeps nothing, holds nothing, and promises nothing.</p>
+
+  <h2><span class="no">§1</span>Almanac Figures</h2>
+  <table class="fig">
+    <tr><td>Omens struck so far</td><td class="n" id="stTotal">—</td></tr>
+    <tr><td>Omens remaining in the edition</td><td class="n" id="stLeft">—</td></tr>
+    <tr><td>Free omens left — Agent ID lane (of 1,000)</td><td class="n" id="stAgentLeft">—</td></tr>
+    <tr><td>Free omens left — verified X lane (of 500)</td><td class="n" id="stXLeft">—</td></tr>
+    <tr><td>Omens sold at 0.001 BNB</td><td class="n" id="stPaid">—</td></tr>
+    <tr><td>Omens granted for referrals</td><td class="n" id="stRefMinted">—</td></tr>
+    <tr><td>Omens in your own keeping</td><td class="n" id="stMine">connect a wallet</td></tr>
+  </table>
+
+  <h2><span class="no">§2</span>The Thirteenth Table</h2>
+  <table class="omens">
+    <tr><td class="num">I</td><td>A black cat crosses left to right.</td><td class="port">Minting is favoured.</td></tr>
+    <tr><td class="num">II</td><td>A mirror cracks in an empty room.</td><td class="port">Check the address twice.</td></tr>
+    <tr><td class="num">III</td><td>Thirteen crows settle on one wire.</td><td class="port">The quota thins.</td></tr>
+    <tr><td class="num">IV</td><td>A ladder leans against no wall.</td><td class="port">Walk around, never under.</td></tr>
+    <tr><td class="num">V</td><td>Salt spills toward the west.</td><td class="port">Gas is cheap today.</td></tr>
+    <tr><td class="num">VI</td><td>A horseshoe hangs points-down.</td><td class="port">Luck runs out unless claimed.</td></tr>
+    <tr><td class="num">VII</td><td>An owl calls before noon.</td><td class="port">A wallet wakes early.</td></tr>
+    <tr><td class="num">VIII</td><td>The moon wears a ring.</td><td class="port">The edition nears its close.</td></tr>
+    <tr><td class="num">IX</td><td>A key turns in a locked door.</td><td class="port">Permits are granted.</td></tr>
+    <tr><td class="num">X</td><td>Thunder on a clear day.</td><td class="port">The chain remembers.</td></tr>
+    <tr><td class="num">XI</td><td>A candle gutters at midnight.</td><td class="port">Do not sign in the dark.</td></tr>
+    <tr><td class="num">XII</td><td>A four-leaf clover, in November.</td><td class="port">Verified, and rare.</td></tr>
+    <tr><td class="num">XIII</td><td>The thirteenth omen is blank.</td><td class="port">It bears your number.</td></tr>
+  </table>
+
+  <h2><span class="no">§3</span>The Omen Desk</h2>
+  <div class="btnrow">
+    <button id="connectInj">Connect — browser wallet</button>
+    <button id="connectWC" class="ghost">Connect — WalletConnect</button>
+  </div>
+  <div id="statusBox">The desk is open. Connect a wallet to claim or purchase an omen.</div>
+
+  <div class="desk">
+    <div>
+      <h3>For bearers of an Agent ID</h3>
+      <p class="small">One free omen per wallet holding a Binance Agent ID on BSC. The desk checks the
+      registry on-chain; no form, no queue, no waitlist.</p>
+      <button id="claimAgentBtn">Claim free — Agent ID</button>
+    </div>
+    <div>
+      <h3>For the verified of X</h3>
+      <p class="small">One free omen per verified (blue) X account. Post a note containing this page's
+      address and your mark — the last six characters of your wallet address:
+      <b class="mono" id="xCode">(connect to see your mark)</b> — then paste the post's link below.</p>
+      <div class="btnrow"><button id="xCompose" class="ghost">Compose the post</button></div>
+      <input type="text" id="tweetUrl" placeholder="https://x.com/yourhandle/status/…">
+      <div class="btnrow"><button id="claimXBtn">Verify &amp; claim free — X</button></div>
+    </div>
+  </div>
+
+  <h2><span class="no">§4</span>The Purchase Ledger</h2>
+  <div class="ledger">
+    <p>Omens beyond the free lanes are entered in the ledger at <b>0.001 BNB</b> apiece, up to ten per
+    transaction. The whole sum is forwarded to the treasury within the same transaction; the contract
+    retains no balance, ever.</p>
+    <div class="btnrow">
+      <select id="buyCount">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+      </select>
+      <button id="buyBtn">Buy — <span id="buyCost">0.001</span> BNB</button>
+      <span class="stamp">100% to treasury</span>
+    </div>
+    <p class="small">Arrived by way of another reader's link? Their address is read from the page address
+    and recorded as referrer automatically.</p>
+  </div>
+
+  <h2><span class="no">§5</span>Letters to Other Readers</h2>
+  <p>Pass the Almanac on. For every five paid omens taken through your link, the ledger grants you one
+  omen gratis. Your personal link and standing appear below once you connect.</p>
+  <input type="text" id="refLink" readonly value="(connect to receive your link)">
+  <table class="fig" style="margin-top:8px">
+    <tr><td>Paid omens taken through your link</td><td class="n" id="refCount">—</td></tr>
+    <tr><td>Bonus omens awaiting your claim</td><td class="n" id="refPending">—</td></tr>
+  </table>
+  <div class="btnrow">
+    <button id="claimBonusBtn">Claim referral bonus</button>
+    <button id="shareBtn" class="ghost">Share on X</button>
+  </div>
+
+  <div class="rule1"></div>
+  <p class="foot">Thirteen Omens (OMEN) · BNB Smart Chain (56)<br>
+  Contract: <span class="mono">0x1E84079e0766AB7cBe182085DEd86443ad9b1433</span></p>
+  <p class="foot" style="font-style:italic">The Almanac foretells nothing. An omen is a picture, not a
+  promise: it may be worth something someday, or nothing at all, and most likely the latter. Spend only
+  what you would leave on a stranger's doorstep without knocking.</p>
+  <p id="diag">almanac press: setting type…</p>
+</div>
+<script>
+// ===== Thirteen Omens — zero external JS libraries. Raw EIP-1193 + fetch JSON-RPC. =====
+var CONTRACT = "0x1E84079e0766AB7cBe182085DEd86443ad9b1433";
+var SITE_URL = "https://reuniakbarpunk212-arch.github.io/thirteen-omens/";
+var PERMIT_URL = "https://permit-worker.reuniakbarpunk212.workers.dev/omen/permit";
+var WC_PROJECT_ID = "ff5985647ed78916bed0155d2ff84a1c";
+var RPCS = ["https://bsc-dataseed.binance.org", "https://bsc-dataseed1.binance.org", "https://bsc-rpc.publicnode.com"];
+var PRICE = 1000000000000000n;
+var SEL = { status:"0x200d2ed2", claimAgent:"0x481a19e1", claimX:"0xb3b5b4fe", mint:"0x94bf804d",
+            refPaid:"0xb851d7ea", refPending:"0x3bf1fc2d", claimBonus:"0x1e375ab9", balanceOf:"0x70a08231" };
+var activeProvider = null, account = null, connecting = false;
+
+function $(id){ return document.getElementById(id); }
+function fmt(n){ return Number(n).toLocaleString("en-US"); }
+function diag(m){ var d = $("diag"); if (d) d.textContent = "almanac press: " + m; }
+function status(m){ $("statusBox").innerHTML = m; }
+function padAddr(a){ return "000000000000000000000000" + a.replace(/^0x/i,"").toLowerCase(); }
+function padUint(v){ var h = BigInt(v).toString(16); while (h.length < 64) h = "0" + h; return h; }
+function words(hex){ var out = [], h = hex.replace(/^0x/i,"");
+  for (var i = 0; i + 64 <= h.length; i += 64) out.push(BigInt("0x" + h.substr(i, 64))); return out; }
+function short(a){ return a.slice(0,6) + "…" + a.slice(-4); }
+function walletCode(){ return account ? account.replace(/^0x/i,"").slice(-6).toLowerCase() : ""; }
+function referrer(){ try{ var q = new URLSearchParams(location.search).get("ref");
+  if (q && /^0x[0-9a-fA-F]{40}$/.test(q)) return q; }catch(e){}
+  return "0x0000000000000000000000000000000000000000"; }
+
+// ---- read-only RPC (no wallet needed) ----
+async function rpcCall(data){
+  var lastErr = null;
+  for (var i = 0; i < RPCS.length; i++){
+    try{
+      var r = await fetch(RPCS[i], { method:"POST", headers:{"content-type":"application/json"},
+        body: JSON.stringify({ jsonrpc:"2.0", id:1, method:"eth_call", params:[{ to:CONTRACT, data:data }, "latest"] }) });
+      var j = await r.json();
+      if (j.result) return j.result;
+      lastErr = new Error(j.error ? j.error.message : "empty result");
+    }catch(e){ lastErr = e; }
+  }
+  throw lastErr || new Error("RPC unreachable");
+}
+async function rpcMethod(method, params){
+  for (var i = 0; i < RPCS.length; i++){
+    try{
+      var r = await fetch(RPCS[i], { method:"POST", headers:{"content-type":"application/json"},
+        body: JSON.stringify({ jsonrpc:"2.0", id:1, method:method, params:params }) });
+      var j = await r.json();
+      if (j.result !== undefined) return j.result;
+    }catch(e){}
+  }
+  return null;
+}
+async function waitReceipt(hash){
+  for (var i = 0; i < 40; i++){
+    var rc = await rpcMethod("eth_getTransactionReceipt", [hash]);
+    if (rc) return rc.status === "0x1";
+    await new Promise(function(res){ setTimeout(res, 3000); });
+  }
+  return null;
+}
+
+// status() tuple: 0 totalMinted, 1 agentFreeUsed, 2 xFreeUsed, 3 paidSold,
+// 4 referralMinted, 5 cap, 6 priceWei, 7 agentFreeCap, 8 xFreeCap
+async function refreshStats(){
+  try{
+    var w = words(await rpcCall(SEL.status));
+    $("stTotal").textContent = fmt(w[0]);
+    $("stLeft").textContent = fmt(w[5] - w[0]);
+    $("stAgentLeft").textContent = fmt(w[7] - w[1]);
+    $("stXLeft").textContent = fmt(w[8] - w[2]);
+    $("stPaid").textContent = fmt(w[3]);
+    $("stRefMinted").textContent = fmt(w[4]);
+    diag("figures read from the chain · block-fresh");
+    if (account) refreshMine();
+  }catch(e){ diag("figures unavailable: " + (e.message || e)); }
+}
+async function refreshMine(){
+  if (!account) return;
+  try{
+    var b = words(await rpcCall(SEL.balanceOf + padAddr(account)));
+    $("stMine").textContent = fmt(b[0]);
+    var rp = words(await rpcCall(SEL.refPaid + padAddr(account)));
+    $("refCount").textContent = fmt(rp[0]);
+    var pd = words(await rpcCall(SEL.refPending + padAddr(account)));
+    $("refPending").textContent = fmt(pd[0]);
+    $("claimBonusBtn").disabled = pd[0] === 0n;
+    $("refLink").value = SITE_URL + "?ref=" + account;
+    $("xCode").textContent = walletCode();
+  }catch(e){}
+}
+
+// ---- sending transactions ----
+async function sendTx(data, valueWei, label){
+  if (!activeProvider || !account) throw new Error("Connect a wallet first.");
+  var value = valueWei && valueWei !== 0n ? "0x" + valueWei.toString(16) : "0x0";
+  status(label + " — confirm in your wallet…");
+  var hash = await activeProvider.request({ method:"eth_sendTransaction",
+    params:[{ from: account, to: CONTRACT, data: data, value: value }] });
+  status(label + " — sent. Tx: <span class='mono'>" + hash + "</span> · awaiting the chain…");
+  var ok = await waitReceipt(hash);
+  if (ok === true) status(label + " — confirmed on-chain. The ledger is updated.");
+  else if (ok === false) status(label + " — the transaction reverted. No omen changed hands.");
+  else status(label + " — sent; confirmation is taking a while. Tx: <span class='mono'>" + hash + "</span>");
+  refreshStats();
+  return hash;
+}
+
+// ---- connecting ----
+async function finishConnect(provider, label, accounts){
+  activeProvider = provider; account = accounts[0]; connecting = false;
+  $("connectInj").textContent = "✓ " + short(account);
+  $("connectWC").textContent = "Connected — " + label;
+  status("Connected: <span class='mono'>" + account + "</span>. The desk recognises your wallet.");
+  diag(label + " connected · figures refreshing");
+  if (provider.on){
+    provider.on("accountsChanged", function(a){
+      if (a && a.length){ account = a[0]; refreshMine(); }
+    });
+    provider.on("chainChanged", function(){ refreshStats(); });
+  }
+  refreshStats();
+}
+async function ensureBSC(provider){
+  try{
+    var ch = await provider.request({ method:"eth_chainId" });
+    if (ch !== "0x38") await provider.request({ method:"wallet_switchEthereumChain", params:[{ chainId:"0x38" }] });
+  }catch(e){}
+}
+async function connectInjected(){
+  if (!window.ethereum){ status("No browser wallet found in this browser. Try WalletConnect instead."); return; }
+  try{
+    connecting = true;
+    var accs = await window.ethereum.request({ method:"eth_requestAccounts" });
+    await ensureBSC(window.ethereum);
+    await finishConnect(window.ethereum, "browser wallet", accs);
+  }catch(e){ connecting = false; status("Connection refused: " + (e.message || e)); }
+}
+// WalletConnect — library loaded lazily at click time (proven pattern), never a global UMD name.
+function loadScript(url, timeoutMs){
+  return new Promise(function(resolve, reject){
+    var s = document.createElement("script");
+    var t = setTimeout(function(){ s.remove(); reject(new Error("timeout")); }, timeoutMs);
+    s.src = url; s.async = true;
+    s.onload = function(){ clearTimeout(t); resolve(); };
+    s.onerror = function(){ clearTimeout(t); s.remove(); reject(new Error("load failed")); };
+    document.body.appendChild(s);
+  });
+}
+var WC_URLS = [
+  "https://unpkg.com/@walletconnect/ethereum-provider@2.21.0/dist/index.umd.js",
+  "https://cdn.jsdelivr.net/npm/@walletconnect/ethereum-provider@2.21.0/dist/index.umd.js"
+];
+function wcCtor(){
+  var ns = window["@walletconnect/ethereum-provider"];
+  return (ns && ns.EthereumProvider) ? ns.EthereumProvider : null;
+}
+async function connectWC(){
+  var btn = $("connectWC");
+  connecting = true;
+  try{
+    btn.disabled = true; btn.textContent = "Loading WalletConnect…";
+    status("Loading the WalletConnect library…");
+    if (!wcCtor()){
+      var ok = false;
+      for (var i = 0; i < WC_URLS.length && !ok; i++){
+        try{ await loadScript(WC_URLS[i], 20000); ok = !!wcCtor(); if (ok) diag("WalletConnect library loaded from: " + WC_URLS[i]); }catch(e){}
+      }
+      if (!ok) throw new Error("WalletConnect library could not be loaded from any source — check your connection and try again.");
+    }
+    var Ctor = wcCtor();
+    btn.textContent = "Opening WalletConnect…";
+    status("A WalletConnect window is opening — pick your wallet and approve there.");
+    var provider = await Ctor.init({
+      projectId: WC_PROJECT_ID, chains: [56], showQrModal: true,
+      metadata: { name: "Thirteen Omens (OMEN)", description: "The Thirteenth Almanac — a luck register on BSC",
+        url: SITE_URL, icons: [] }
+    });
+    await provider.connect();
+    var accs = (provider.accounts && provider.accounts.length) ? provider.accounts
+      : await provider.request({ method:"eth_accounts" });
+    if (!accs || !accs.length) throw new Error("WalletConnect returned no account");
+    await finishConnect(provider, "WalletConnect", accs);
+  }catch(e){
+    status("WalletConnect failed: " + (e.message || e));
+    btn.textContent = "Connect — WalletConnect"; btn.disabled = false; connecting = false;
+  }
+}
+
+// ---- the three lanes ----
+async function claimAgent(){
+  try{ await sendTx(SEL.claimAgent, 0n, "Agent ID free claim"); }
+  catch(e){ status("Claim failed: " + (e.message || e)); }
+}
+function strTail(s){
+  var bytes = new TextEncoder().encode(s), hex = "";
+  for (var i = 0; i < bytes.length; i++) hex += bytes[i].toString(16).padStart(2, "0");
+  var padded = hex; while (padded.length % 64) padded += "0";
+  return { tail: padUint(bytes.length) + padded, size: 32 + padded.length / 2 };
+}
+function bytesTail(hexStr){
+  var h = hexStr.replace(/^0x/i, ""), padded = h;
+  while (padded.length % 64) padded += "0";
+  return padUint(h.length / 2) + padded;
+}
+function claimXData(handle, deadline, sig){
+  var s = strTail(handle);
+  return SEL.claimX + padUint(96) + padUint(BigInt(deadline)) + padUint(96 + s.size) + s.tail + bytesTail(sig);
+}
+async function claimX(){
+  if (!account){ status("Connect a wallet first — the permit is bound to it."); return; }
+  var url = $("tweetUrl").value.trim();
+  if (!url){ status("Paste the link to your X post first."); return; }
+  try{
+    status("Asking the gate to read your post…");
+    var r = await fetch(PERMIT_URL, { method:"POST", headers:{"content-type":"application/json"},
+      body: JSON.stringify({ wallet: account, tweetUrl: url }) });
+    var j = null; try{ j = await r.json(); }catch(e){}
+    if (!r.ok || !j || !j.signature){
+      status("The gate refused the permit (" + r.status + ")" + (j && j.error ? ": " + j.error : "") +
+        ". Check the post carries this page's address and your mark <b>" + walletCode() + "</b>, and that your account is verified.");
+      return;
+    }
+    var data = claimXData(j.handle, j.deadline, j.signature);
+    await sendTx(data, 0n, "Verified X free claim");
+  }catch(e){ status("Claim failed: " + (e.message || e)); }
+}
+async function buy(){
+  try{
+    var n = parseInt($("buyCount").value, 10);
+    var data = SEL.mint + padUint(n) + padAddr(referrer());
+    await sendTx(data, PRICE * BigInt(n), "Purchase of " + n + " omen(s)");
+  }catch(e){ status("Purchase failed: " + (e.message || e)); }
+}
+async function claimBonus(){
+  try{ await sendTx(SEL.claimBonus, 0n, "Referral bonus claim"); }
+  catch(e){ status("Bonus claim failed: " + (e.message || e)); }
+}
+
+// ---- sharing (the only social ask: pass the link on) ----
+function shareText(){
+  var link = SITE_URL + "?ref=" + (account || "0x0000000000000000000000000000000000000000");
+  return "I just opened the Thirteenth Almanac — Thirteen Omens on BSC. 🔮\n\n" +
+    "1,500 omens are free: 1,000 for Agent ID holders, 500 for verified X accounts. The rest cost 0.001 BNB, paid straight to the treasury.\n\n" +
+    "Read your omen:\n" + link + "\n\n#ThirteenOmens $OMEN";
+}
+function xPostText(){
+  return "Claiming my free omen from the Thirteenth Almanac 🔮\n\n" + SITE_URL + "\n\nmark: " + walletCode();
+}
+$("shareBtn").addEventListener("click", function(){
+  window.open("https://x.com/intent/tweet?text=" + encodeURIComponent(shareText()), "_blank");
+});
+$("xCompose").addEventListener("click", function(){
+  if (!account){ status("Connect first — the post must carry your wallet's mark."); return; }
+  window.open("https://x.com/intent/tweet?text=" + encodeURIComponent(xPostText()), "_blank");
+});
+$("connectInj").addEventListener("click", connectInjected);
+$("connectWC").addEventListener("click", connectWC);
+$("claimAgentBtn").addEventListener("click", claimAgent);
+$("claimXBtn").addEventListener("click", claimX);
+$("buyBtn").addEventListener("click", buy);
+$("claimBonusBtn").addEventListener("click", claimBonus);
+$("buyCount").addEventListener("change", function(){
+  $("buyCost").textContent = (0.001 * parseInt(this.value, 10)).toFixed(3);
+});
+refreshStats();
+setInterval(refreshStats, 30000);
+diag("type set · WalletConnect ready · figures loading from BSC");
+</script>
+</body>
+</html>
